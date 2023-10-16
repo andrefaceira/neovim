@@ -92,6 +92,7 @@ function M.setup()
           require("config.nvimtree").setup()
         end,
     }
+
     -- IndentLine
     use {
       "lukas-reineke/indent-blankline.nvim",
@@ -146,6 +147,17 @@ function M.setup()
       end,
       ft = "markdown",
       cmd = { "MarkdownPreview" },
+    }
+
+    -- FZF
+    use { "junegunn/fzf", run = "./install --all", event = "VimEnter" } 
+    use { "junegunn/fzf.vim", event = "BufEnter" }
+
+    -- FZF Lua
+    use {
+      "ibhagwan/fzf-lua",
+      event = "BufEnter",
+      requires = { "kyazdani42/nvim-web-devicons" },
     }
 
     -- Bootstrap Neovim

@@ -55,3 +55,21 @@ Press . on a file to pre-populate it at the end of a : command line.
 Press y. to yank an absolute path for the file under the cursor.
 Press ~ to go home.
 Use Vim’s built-in CTRL-^ (CTRL-6) for switching back to the previous buffer from the netrw buffer.
+
+# Find 
+
+sf / sfi - find and open in a horizontal split
+vert sf / sfi - find and open in vertical split
+tabf - find and open in a new tab
+
+## fzf
+
+Commands are available for
+
+Buffer and Files — e.g. buffers, files, oldfiles, quickfix, loclist, lines, etc.
+Search — e.g.grep, grep_last, grep_cword, grep_cWORD, grep_project, live_grep, etc.
+Git — e.g. git_files, git_status, git_commits, git_bcommits, git_branches, etc.
+LSP — e.g. lsp_references, lsp_definitions, lsp_declarations, lsp_document_symbols, lsp_code_actions, etc.
+Misc — e.g. man_pages, commands, search_history, command_history, jumps, registers, keymaps, marks, etc.
+To see all commands, we can use FzfLua builtin.
+

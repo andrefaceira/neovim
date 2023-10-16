@@ -29,10 +29,21 @@ vim.cmd [[
   augroup end
 ]]
 
--- -- Better search
--- opt.path:remove "/usr/include"
--- opt.path:append "**"
--- -- vim.cmd [[set path=.,,,$PWD/**]] -- Set the path directly
--- opt.wildignorecase = true
--- opt.wildignore:append "**/node_modules/*"
--- opt.wildignore:append "**/.git/*"
+
+-- Better search
+opt.path:remove "/usr/include"
+opt.path:append "**"
+-- vim.cmd [[set path=.,,,$PWD/**]] -- Set the path directly
+
+opt.wildignorecase = true
+opt.wildignore:append "**/node_modules/*"
+opt.wildignore:append "**/.git/*"
+
+
+-- Better Netrw
+g.netrw_banner = 0 -- Hide banner
+g.netrw_browse_split = 4 -- Open in previous window
+g.netrw_altv = 1 -- Open with right splitting
+g.netrw_liststyle = 3 -- Tree-style view
+g.netrw_list_hide = (vim.fn["netrw_gitignore#Hide"]()) .. [[,\(^\|\s\s\)\zs\.\S\+]] -- use .gitignore
+
