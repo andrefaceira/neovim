@@ -1,15 +1,13 @@
 #!/usr/bin/sh
 
-NVIM_BEGINNER=~/.config/nvim-beginner
-export NVIM_BEGINNER
+FACEIRA_NEOVIM=~/.config/faceira-neovim
+export FACEIRA_NEOVIM
 
-rm -rf $NVIM_BEGINNER
+rm -rf "$FACEIRA_NEOVIM"
 
-mkdir -p $NVIM_BEGINNER/share
-mkdir -p $NVIM_BEGINNER/nvim
+mkdir -p "$FACEIRA_NEOVIM"/share
+mkdir -p "$FACEIRA_NEOVIM"/nvim
 
-stow --restow --target=$NVIM_BEGINNER/nvim .
+stow --restow --target="$FACEIRA_NEOVIM"/nvim .
 
-alias nvb='XDG_DATA_HOME=$NVIM_BEGINNER/share XDG_CONFIG_HOME=$NVIM_BEGINNER nvim' 
-
-export nvb
+alias nv='XDG_DATA_HOME=$FACEIRA_NEOVIM/share XDG_CACHE_HOME=$FACEIRA_NEOVIM XDG_CONFIG_HOME=$FACEIRA_NEOVIM nvim'
