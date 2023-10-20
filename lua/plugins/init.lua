@@ -1,12 +1,42 @@
 return {
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
-  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-tree/nvim-web-devicons",
+    dependencies = { "DaikyXendo/nvim-material-icon" },
+    config = function()
+      require("nvim-web-devicons").setup {
+        override = require("nvim-material-icon").get_icons(),
+      }
+    end,
+  },
+  { "yamatsum/nvim-nonicons", config = true, enabled = false },
   { "nacro90/numb.nvim", event = "BufReadPre", config = true },
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "BufReadPre",
-    config = true,
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {
+      indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { enabled = false },
+      exclude = {
+        filetypes = {
+          "help",
+          "alpha",
+          "dashboard",
+          "neo-tree",
+          "Trouble",
+          "lazy",
+          "mason",
+          "notify",
+          "toggleterm",
+          "lazyterm",
+        },
+      },
+    },
+    main = "ibl",
   },
   {
     "stevearc/dressing.nvim",
