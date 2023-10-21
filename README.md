@@ -12,6 +12,9 @@ brew install stow
 brew install fzf
 brew install tmux
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 brew install --cask font-bigblue-terminal-nerd-font
