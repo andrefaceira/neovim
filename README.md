@@ -3,10 +3,18 @@
 ## Dependencies
 
 ````bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 brew install ripgrep
 brew install fd
 brew install stow
+brew install fzf
+brew install tmux
+
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+brew install --cask font-bigblue-terminal-nerd-font
 
 ````
 
