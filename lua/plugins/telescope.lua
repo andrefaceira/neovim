@@ -33,7 +33,7 @@ return {
         end,
         desc = "Buffer",
       },
-      { "<leader>vo", "<cmd>Telescope aerial<cr>", desc = "Outline" },
+      { "<leader>vo", "<cmd>Telescope aerial<cr>", desc = "Code Outline" },
     },
     config = function(_, _)
       local telescope = require "telescope"
@@ -94,6 +94,7 @@ return {
       telescope.load_extension "project"
       telescope.load_extension "projects"
       telescope.load_extension "aerial"
+      telescope.load_extension "dap"
     end,
   },
   {
