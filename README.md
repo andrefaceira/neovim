@@ -19,6 +19,8 @@ brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 brew install --cask font-bigblue-terminal-nerd-font
 
+curl -L git.io/antigen > antigen.zsh
+
 ````
 
 ## Shortcuts
